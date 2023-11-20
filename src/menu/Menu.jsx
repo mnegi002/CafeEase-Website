@@ -1,4 +1,4 @@
-import ItemCard from "./menuItem/Itemcard"
+// import ItemCard from "./menuItem/Itemcard"
 import classes from './Menu.module.css'
 import Menudata from './Menudata'
 import MenuCard from "./Menucard"
