@@ -1,0 +1,11 @@
+.footer{
+    margin-top:20px;
+}
+
+.footer>p{
+    text-align:center;
+}
+
+.footerspan{
+    color:rgb(59, 59, 179);
+}
