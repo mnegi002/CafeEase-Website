@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import classes from './Form.module.css'
 const Form = () => {
-    const [error , setError] = useState(null)
+    const [setError] = useState(null)
     const [data , setData] = useState({
         name : '',
         email : '' ,

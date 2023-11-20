@@ -3,7 +3,7 @@ import Home from './home/Home';
 import Contact from './contact/Contact';
 import Menu from './menu/Menu';
 import Navbar from './home/Navbar';
-import Footer from './home/Footer';
+// import Footer from './home/Footer';
 
 function App() {
   return (

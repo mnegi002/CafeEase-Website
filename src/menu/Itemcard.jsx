@@ -12,7 +12,7 @@ const ItemCard = () => {
                     
                     <img src="/images/RajmaRice.jpg" alt="img" />
                     
-                    <button className={classes.button} role="button">Add</button>
+                    <button className={classes.button}>Add</button>
                 </div>
             </div>
             <div className={classes.line}></div>
