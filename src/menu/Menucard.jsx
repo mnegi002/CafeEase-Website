@@ -1,19 +1,20 @@
-import './Menudata'
-const Card = (props) => {
+// import './Menudata'
+import classes from './Menu.module.css'
+const MenuCard = (props) => {
   return (
     <>
-      <div className="card-container">
-        <div className="card-carousel">
-          <div className="slider">
-            <img className="slider-image" id="slide-1"
-              src={props.imgsrc_1} alt="eror" />
-            <img className="slider-image" id="slide-2"
-              src={props.imgsrc_2} alt="eror" />
-            <img className="slider-image" id="slide-3"
-              src={props.imgsrc_3} alt="eror" />
+      <div className={classes['card-container']}>
+        <div className={classes['card-carousel']}>
+          <div className={classes.slider}>
+            <img className={classes['slider-image']} id={classes['slide-1']}
+              src={props.imgsrc_1} alt='err' />
+            <img className={classes['slider-image']} id={classes['slide-2']}
+              src={props.imgsrc_2} alt='err' />
+            <img className={classes['slider-image']} id={classes['slide-3']}
+              src={props.imgsrc_3} alt='err' />
           </div>
         </div>
-        <div className="category">
+        <div className={classes.category}>
           <button>{props.title}</button>
 
         </div>
@@ -22,4 +23,4 @@ const Card = (props) => {
     </>
   );
 };
-export default Card;
+export default MenuCard;
