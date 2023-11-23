@@ -3,11 +3,12 @@ import Home from './home/Home';
 import Contact from './contact/Contact';
 import Menu from './menu/Menu';
 import Navbar from './home/Navbar';
+import CartProvider from './cart/cartContextAPI/CartProvider';
 // import Footer from './home/Footer';
 
 function App() {
   return (
-    <>
+    <CartProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Navbar/>}>
@@ -18,7 +19,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
-    </>
+    </CartProvider>
   );
 }
 

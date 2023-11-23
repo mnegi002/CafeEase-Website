@@ -4,8 +4,11 @@ import classes from './Menu.module.css'
 // import MenuCard from "./Menucard"
 import ItemcardData from './menuItem/Itemcarddata'
 import ItemCard from './menuItem/Itemcard'
+import Cart from '../cart/Cart'
+import { useState } from 'react'
 
 const Menu = () => {
+
     return (
         <>
 
@@ -27,7 +30,7 @@ const Menu = () => {
                 })}
             </div>
              */}
-    {/* <CartItem/> */}
+
     {ItemcardData.map((section, index) => (
       <div key={index}>
         <h2 className={classes.menuhead}>{section.name}</h2>

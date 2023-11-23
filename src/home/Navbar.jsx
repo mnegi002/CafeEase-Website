@@ -1,9 +1,21 @@
 import { NavLink, Outlet } from "react-router-dom"
 import classes from './Navbar.module.css'
+import { useState } from "react"
+import Cart from "../cart/Cart"
+import CartButton from "./NavCartButton"
 
 const Navbar = () => {
+    const[cartShow,setCartShow] = useState(false)
+    const showHandler = () =>{
+      setCartShow(true)
+    }
+    const hideHandler = () =>{
+      setCartShow(false)
+    }
     return (
         <>
+        
+            {cartShow && <Cart onClose={hideHandler}/>}
             <div className={classes.navdiv}>
                 <div className={classes.logodiv}>
                     <NavLink className={classes.navlink} to="/">
@@ -28,10 +40,7 @@ const Navbar = () => {
                         })}>Contact</NavLink></li>
                     </ul>
                 </div>
-                <div className={classes.cartlogo}>
-                <i className="fa-solid fa-cart-shopping"></i>
-                <span className={classes.cartspan}>5</span>
-                </div>
+                <CartButton onClick={showHandler}/>
                 <div className={classes.navlog}>
                     <button className={classes.login}>Log In</button>
                     <button className={classes.signup}>Sign Up</button>

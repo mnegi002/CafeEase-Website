@@ -22,7 +22,7 @@
   
   .price {
     font-weight: bold;
-    color:rgb(95, 24, 77);
+    color:#ff511c;
   }
   
   .amount {
@@ -49,8 +49,8 @@
     font: inherit;
     font-weight: bold;
     font-size: 1.25rem;
-    color:rgb(95, 24, 77);
-    border: 1px solid rgb(95, 24, 77);
+    color:#ff511c;
+    border: 1px solid #ff511c;
     width: 3rem;
     text-align: center;
     border-radius: 6px;
@@ -62,6 +62,6 @@
   
   .cart-item button:hover,
   .cart-item button:active {
-    background-color:rgb(112, 29, 91);
+    background-color:#ff511c;
     color: white;
   }
