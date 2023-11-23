@@ -1,5 +1,7 @@
-const ItemcardData ={
-    mainCourse : [
+const ItemcardData =[
+    {
+    name : 'Main Course',
+    items : [
     {
         id : 1,
         title : 'Chole-Chawal',
@@ -21,11 +23,14 @@ const ItemcardData ={
         info : 'Lorem ipsum dolor sit amet.',
         imgsrc : 'images/friedRice.jpg',
     },
-],
-    beverages : [
+]
+    },
+    {
+    name : 'Beverages',
+    items : [
     {
         id : 1,
-        title : 'Thums Up',
+        title : 'ThumsUp',
         price : 40,
         info : 'Lorem ipsum dolor sit amet.',
         imgsrc : 'images/ThumsUp.webp',
@@ -86,8 +91,12 @@ const ItemcardData ={
         info : 'Lorem ipsum dolor sit amet.',
         imgsrc : '/images/chai.jpg',
     },
-],
-    fastFood : [
+]
+    },
+
+    {
+        name : 'Fast Food',
+    items : [
     {
         id : 1,
         title : 'Chole Bhature' ,
@@ -138,21 +147,25 @@ const ItemcardData ={
         info :'Lorem ipsum dolor sit amet.',
         imgsrc : '/images/Samosa.jpg',
     },
-],
-    wafers : [
+]
+    },
+
+    {
+    name : 'Wafers',
+    items : [
         {
         id : 1,
         title : 'Haldirams Chips',
         price : 15,
         info : 'Lorem ipsum dolor sit amet.',
-        imgsrc : '/images/haldiramgreen.webp',
+        imgsrc : '/images/haldiramgreeen.webp',
     },
  {
         id : 2,
         title : 'Haldirams Chips' ,
         price : 15,
         info : 'Lorem ipsum dolor sit amet.',
-        imgsrc : 'images/haldirambue.webp',
+        imgsrc : 'images/haldiramblue.webp',
     },
     {
         id : 3,
@@ -176,5 +189,7 @@ const ItemcardData ={
         imgsrc : '/images/GreenLays.webp',
     },
 ]
-}
+},
+]
+
 export default ItemcardData
