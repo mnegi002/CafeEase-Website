@@ -9,8 +9,8 @@ const Form = () => {
         message : '',
     })
     
-    function isValidEmail(email) {
-        return /\S+@\S+\.\S+/.test(email);
+    function isValidEmail() {
+        return /\S+@\S+\.\S+/.test(error);
       }
 
     const changeHandler = (event)=>{
