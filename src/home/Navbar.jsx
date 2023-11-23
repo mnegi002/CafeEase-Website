@@ -16,22 +16,28 @@ const Navbar = () => {
                     <ul className={classes.list}>
                         <li><NavLink className={classes.listItem} to="/" style={({ isActive }) => ({
                             borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
-                            borderBottomWidth : isActive ? 'medium' : 'none' ,
+                            borderBottomWidth: isActive ? 'medium' : 'none'
                         })}>Home</NavLink></li>
                         <li><NavLink className={classes.listItem} to="menu" style={({ isActive }) => ({
-                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none'
+                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
+                            borderBottomWidth: isActive ? 'medium' : 'none'
                         })}>Menu</NavLink></li>
                         <li><NavLink className={classes.listItem} to="contact" style={({ isActive }) => ({
-                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none'
+                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
+                            borderBottomWidth: isActive ? 'medium' : 'none'
                         })}>Contact</NavLink></li>
                     </ul>
+                </div>
+                <div className={classes.cartlogo}>
+                <i className="fa-solid fa-cart-shopping"></i>
+                <span className={classes.cartspan}>5</span>
                 </div>
                 <div className={classes.navlog}>
                     <button className={classes.login}>Log In</button>
                     <button className={classes.signup}>Sign Up</button>
                 </div>
             </div>
-            <Outlet/>
+            <Outlet />
         </>
     )
 }

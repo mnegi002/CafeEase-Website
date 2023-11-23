@@ -1,14 +1,17 @@
 // import ItemCard from "./menuItem/Itemcard"
 import classes from './Menu.module.css'
-import Menudata from './Menudata'
-import MenuCard from "./Menucard"
+// import Menudata from './Menudata'
+// import MenuCard from "./Menucard"
+import ItemcardData from './menuItem/Itemcarddata'
+import ItemCard from './menuItem/Itemcard'
 
 const Menu = () => {
     return (
         <>
+
             {/* <h1>Menu</h1> */}
             {/* <ItemCard/> */}
-            <div className={classes.menucontainer}>
+            {/* <div className={classes.menucontainer}>
                 {Menudata.map((val, ind) => {
                     return <MenuCard key={ind}
                         imgsrc_1={val.imgsrc_1}
@@ -23,7 +26,27 @@ const Menu = () => {
                         title={val.title} />;
                 })}
             </div>
-            
+             */}
+    {/* <CartItem/> */}
+    {ItemcardData.map((section, index) => (
+      <div key={index}>
+        <h2 className={classes.menuhead}>{section.name}</h2>
+        
+          {section.items.map((item, itemIndex) => (
+            <ItemCard
+            key={itemIndex}
+            // itemIndex = {item.id}
+            title = {item.title}
+            price = {item.price}
+            info = {item.info}
+            imgsrc = {item.imgsrc}
+            />
+          ))}
+        
+      </div>
+    ))}
+    
+  
         </>
     )
 }

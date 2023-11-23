@@ -1,6 +1,30 @@
 // import './Menudata'
 import classes from './Menu.module.css'
+// import MenuButton from './MenuButton'
+import ItemcardData from './menuItem/Itemcarddata';
+import ItemCard from './menuItem/Itemcard';
 const MenuCard = (props) => {
+  const clickHandler = () => {
+    
+    {ItemcardData.map((section, index) => (
+      <div key={index}>
+        <h2>{section.title}</h2>
+        <ul>
+          {section.items.map((item, itemIndex) => (
+            <ItemCard 
+            key={itemIndex}
+            id = {item.id}
+            title = {item.title}
+            price = {item.price}
+            info = {item.info}
+            imgsrc = {item.imgsrc}
+            />
+          ))}
+        </ul>
+      </div>
+    ))}
+    
+  }
   return (
     <>
       <div className={classes['card-container']}>
@@ -15,7 +39,7 @@ const MenuCard = (props) => {
           </div>
         </div>
         <div className={classes.category}>
-          <button>{props.title}</button>
+          <button onClick={clickHandler}>{props.title}</button>
 
         </div>
 
