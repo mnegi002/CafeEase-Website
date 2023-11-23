@@ -92,7 +92,13 @@
     background: #ff3f05;
 }
 
+.menuhead{
+    color:black;
+    /* margin-left: 235px; */
+    text-align: center;
 
+
+}
 
 /* @keyframes scroll {
     0%{

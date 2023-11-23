@@ -4,7 +4,7 @@ const DishCard = (props) =>{
         <>
         <div className={classes.dishcarddiv}>
             <div className={classes.picdiv}>
-                <img classname={classes.cardimg} src={props.imgsrc} alt="pic" width="100" height="100"/>
+                <img className={classes.cardimg} src={props.imgsrc} alt="pic" width="100" height="100"/>
             </div>
             <div className={classes.titlediv}>
                 <h2> {props.title}</h2>

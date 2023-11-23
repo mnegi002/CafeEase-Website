@@ -1,46 +1,23 @@
-const Cartitem = () => {
-  return (
-    <>
-      <div className="container">
-        <div className="cart-box">
-          <div className="item-box">
-            <div className="item-detail">
-              <div className="item-name">
-                <p>Maggi</p>
-              </div>
-              <div className="item-price">
-                <div className="price">
-                  <p>200</p>
-                </div>
-                <div className="quantity">
-                  <p>x1</p>
-                </div>
-              </div>
-            </div>
+import classes from './CartItem.module.css';
 
-            <div className="incre-decre">
-              <button>+</button>
-              <button>-</button>
-            </div>
-          </div>
-          <div className="total-box">
-            <div className="amount-box">
-              <div className="total-text">
-                <b>Total Amount</b>
-              </div>
-              <div className="total-amount">
-                <b>NA</b>
-              </div>
-            </div>
-            <div className="close-order-cart-buttons">
-              <button className="close-button">close</button>
-              <button className="order-button">order</button>
-            </div>
-          </div>
+const CartItem = (props) => {
+  // const price = `₹${props.price.toFixed(2)}`;
+
+  return (
+    <li className={classes['cart-item']}>
+      <div>
+        <h2>{props.name}</h2>
+        <div className={classes.summary}>
+          <span className={classes.price}>{props.price}</span>
+          <span className={classes.amount}>x {props.amount}</span>
         </div>
       </div>
-    </>
+      <div className={classes.actions}>
+        <button onClick={props.onRemove}>-</button>
+        <button onClick={props.onAdd}>+</button>
+      </div>
+    </li>
   );
 };
 
-export default Cartitem;
+export default CartItem;
