@@ -1,23 +1,31 @@
+
 .navdiv{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    /* position: fixed; */
+    /* top:0; */
+/* left :18%; */
     align-items: center;
     height:9vh;
-    /* overflow: hidden; */
+    /* overflow: auto; */
     /* border:2px solid red; */
+    background-color:  #ffeae0;
     
 }
+
+  
 
 .logodiv{
    height: 90%;
     width:30%;
+    position: relative;
     /* height: 9vh; */
     /* border:2px solid green; */
     display:flex;
     /* justify-content: center; */
     align-items: center;
+    
 
     
 }
@@ -35,6 +43,7 @@
     padding-left:180px;
     font-size: 30px;
 
+
     
 }
 .span{
@@ -47,6 +56,8 @@
     /* border:2px solid yellow; */
     display:flex;
     align-items: center;
+    position: relative;
+
 }
 
 .list{
@@ -83,6 +94,8 @@
     margin-top: 10px;
     align-items: center;
     /* margin-right:100px; */
+    position: relative;
+
     
 }
 
@@ -97,6 +110,8 @@ button{
     border:none;
     color: #000000;
     cursor: pointer;
+    position: relative;
+
     
 }
 
@@ -108,4 +123,6 @@ button{
     background-color: #ff511c;
     color:white;
     border-radius: 5px;
+    position: relative;
+
 }

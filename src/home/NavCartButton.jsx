@@ -3,9 +3,12 @@ import classes from './NavCartButton.module.css'
 import CartContext from '../cart/cartContextAPI/CartContext'
 const CartButton = (props) => {
     const cartCtx = useContext(CartContext)
-    const numOfCartItems = cartCtx.items.reduce((curNumber , item )=>{
-        return curNumber + item.amount
-    },0)
+    // const numOfCartItems = cartCtx.items.reduce((curNumber , item )=>{
+    //     return curNumber + item.amount
+        
+    // },0)
+    const numOfCartItems = cartCtx.items.length
+    console.log(numOfCartItems)
     return (
         <>
             <div className={classes.cartlogo} onClick={props.onClick} >

@@ -5,10 +5,11 @@ import classes from './Menu.module.css'
 import ItemcardData from './menuItem/Itemcarddata'
 import ItemCard from './menuItem/Itemcard'
 import Cart from '../cart/Cart'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import CartContext from '../cart/cartContextAPI/CartContext'
 
-const Menu = () => {
-
+const Menu = (props) => {
+  
     return (
         <>
 
@@ -37,7 +38,9 @@ const Menu = () => {
         
           {section.items.map((item, itemIndex) => (
             <ItemCard
+            // onAddToCart={addToCartHandler}
             key={itemIndex}
+            id = {item.id}
             // itemIndex = {item.id}
             title = {item.title}
             price = {item.price}

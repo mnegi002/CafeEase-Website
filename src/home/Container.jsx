@@ -9,7 +9,7 @@ const Container = () => {
             <div className={classes.maincontainer} >
                 <div className={classes.container}>
                     <div className={classes.content}>
-                        <h1 className={classes.h1head}>Dine smart with <br /> Cafe.</h1>
+                        <h1 className={classes.h1head}>Dine smart with <br /> Cafe<span className={classes.sp}>Ease.</span></h1>
                         <h4 className={classes.h4head} >Say goodbye to queues and hello to the convenience <br/> of  CafeEase, where every order is a smart choice.</h4>
                         <NavLink to="menu"><button className={classes.menulink}>Explore Food</button></NavLink>
                     </div>
