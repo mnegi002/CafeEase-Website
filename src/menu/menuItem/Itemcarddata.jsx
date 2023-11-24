@@ -185,7 +185,7 @@ const ItemcardData =[
         id : 'w5' ,
         title : 'Lays' ,
         price : 15,
-        info : 'Calm Cream & Onion Flavour (Green).',
+        info : 'American Style Cream & Onion Flavour (Green).',
         imgsrc : '/images/GreenLays.webp',
     },
 ]
