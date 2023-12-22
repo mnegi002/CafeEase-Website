@@ -5,7 +5,6 @@ import ItemcardData from './menuItem/Itemcarddata';
 import ItemCard from './menuItem/Itemcard';
 const MenuCard = (props) => {
   const clickHandler = () => {
-    
     {ItemcardData.map((section, index) => (
       <div key={index}>
         <h2>{section.title}</h2>
@@ -40,7 +39,6 @@ const MenuCard = (props) => {
         </div>
         <div className={classes.category}>
           <button onClick={clickHandler}>{props.title}</button>
-
         </div>
 
       </div>

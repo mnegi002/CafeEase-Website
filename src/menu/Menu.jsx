@@ -9,6 +9,7 @@ import ItemCard from './menuItem/Itemcard'
 // import CartContext from '../cart/cartContextAPI/CartContext'
 
 const Menu = (props) => {
+  console.log(ItemcardData)
   
     return (
         <>
@@ -31,7 +32,6 @@ const Menu = (props) => {
                 })}
             </div>
              */}
-
     {ItemcardData.map((section, index) => (
       <div key={index}>
         <h2 className={classes.menuhead}>{section.name}</h2>

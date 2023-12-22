@@ -3,13 +3,15 @@ import classes from './Itemcard.module.css'
 import './Itemcarddata'
 import CartContext from '../../cart/cartContextAPI/CartContext'
 const ItemCard = (props) => {
-    const cartCtx = useContext(CartContext)
+    const cartCtx = useContext(CartContext);
     const itemHandler = amount =>{
+        // console.log("THE AMOUNT", amount);
         cartCtx.addItem({
             id:props.id,
             title :props.title,
             price : props.price,
-            amount : amount})
+            amount :  1})
+            // console.log(cartCtx)
     }
     return (
         <div className={classes.divmain}>
