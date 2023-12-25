@@ -3,14 +3,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* position: fixed; */
-    /* top:0; */
+    position: sticky;
+    top:0;
+    z-index: 2;
 /* left :18%; */
     align-items: center;
-    height:9vh;
+    height:9.8vh;
     /* overflow: auto; */
     /* border:2px solid red; */
-    background-color:  #ffeae0;
+    background-color:  #ffe3d6;
+    padding-bottom:5px ;
+    box-shadow: rgba(0, 0, 0, 0.18) 1.95px 1.95px 2.6px;
     
 }
 
