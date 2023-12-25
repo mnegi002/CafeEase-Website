@@ -41,10 +41,27 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <CartButton onClick={showHandler}/>
-                <div className={classes.navlog}>
+                {/* <div className={classes.navlog}>
                     <button className={classes.login}>Log In</button>
                     <button className={classes.signup}>Sign Up</button>
+                </div> */}
+                
+                <div className={classes.navlog}>
+                <NavLink className={classes.login} to="Login" style={({ isActive }) => ({
+                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
+                            borderBottomWidth: isActive ? 'medium' : 'none'
+                        })}>Login</NavLink>
+                <NavLink className={classes.signup} to="createuser" style={({ isActive }) => ({
+                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
+                            borderBottomWidth: isActive ? 'medium' : 'none'
+                        })}>Signup</NavLink>
+
                 </div>
+                
+                        
+
+                
+
             </div>
             <Outlet />
         </>

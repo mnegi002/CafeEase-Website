@@ -4,12 +4,18 @@ import CartContext from '../cart/cartContextAPI/CartContext'
 const CartButton = (props) => {
     const cartCtx = useContext(CartContext)
     const [isHighlighted , setIsHighlighted] = useState(false)
-    // const numOfCartItems = cartCtx.items.reduce((curNumber , item )=>{
-    //     return curNumber + item.amount
-        
-    // },0)
+    // console.log("ITEMS",cartCtx.items);
+    const numOfCartItems = cartCtx.items.reduce((curNumber , item )=>{
+        // console.log({item})
+        // console.log({curNumber})
+        // console.log(curNumber + item.amount.detail)
+        return curNumber + item.amount
+    },0)
+    // const numOfCartItems = cartCtx.items.length;
+    //currnumber = 3, cartCtx.items.length = 4
+    //.reduce, 3 + 1 + 1 + 1 + 1
     const {items} = cartCtx
-    const numOfCartItems = cartCtx.items.length
+    // const numOfCartItems = cart Ctx.items.length
     // console.log(numOfCartItems)
     const navCart = `${classes.cartlogo} ${isHighlighted ? classes.bump : ' '}`
     useEffect(()=>{

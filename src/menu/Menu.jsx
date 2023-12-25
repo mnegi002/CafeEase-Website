@@ -10,6 +10,7 @@ import Carousel from './menuItem/Carousel'
 // import CartContext from '../cart/cartContextAPI/CartContext'
 
 const Menu = (props) => {
+  console.log(ItemcardData)
   
     return (
         <>
@@ -32,7 +33,6 @@ const Menu = (props) => {
                 })}
             </div>
              */}
-    <Carousel></Carousel>
 
     {ItemcardData.map((section, index) => (
       <div key={index}>
