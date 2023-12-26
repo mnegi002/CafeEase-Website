@@ -8,7 +8,7 @@
 }
 
 .container{
-    width: 65%;
+    width: 100%;
     height: 5%;
     background-color: beige;
     border: 2px none;
@@ -27,6 +27,9 @@
     width: 200px;
     border: 2px none;
     margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   
 }
 
@@ -47,7 +50,9 @@
 }
 
 .box h4{
-    margin-top: 3%;
+    
+    margin-left: 10%;
+    margin-bottom: 2%;
 }
 
 .box p{
@@ -121,7 +126,7 @@
 
 .line {
     height: 2px;
-    width: 65%;
+    width: 100%;
     background-color: #d3d3d3;
     margin: 3px 0;
   }

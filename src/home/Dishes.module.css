@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* align-items: center; */
     flex-wrap: wrap;
     height: 220px;
     width: 15%;
@@ -23,7 +24,7 @@
 }
 
 .picdiv {
-    /* border:5px solid blue; */
+    /* border:4px solid blue; */
     display: flex;
     justify-content: center;
     margin-top: -20px;
@@ -43,7 +44,9 @@
     /* border:2px solid red; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 80px;
+    /* margin-top:30px; */
 }
 
 .titlediv>h2 {
@@ -64,20 +67,23 @@
 
 .buttondiv {
     /* border:2px solid red; */
-    height: 70px;
+    height: 30px;
 }
 
 .buttondiv button {
     background-color: #ff511c;
     color: white;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width:90%;
     height: 40px;
     cursor: pointer;
     padding-top: 5px;
+    font-size: larger;
 }
 
 .buttondiv {
-    margin-top: -25px;
-    
+    /* margin-top: -25px; */
 }

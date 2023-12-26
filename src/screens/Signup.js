@@ -22,7 +22,11 @@ export default function Signup() {
             if(!json.success){
                 alert("Enter Valid Credentails")
             }
-        
+            if(json.success){
+              alert('Your id has been created Successfully')
+              console.log("success")
+              window.location.reload()
+            }
         
     }
     const changeHandler = (event)=>{

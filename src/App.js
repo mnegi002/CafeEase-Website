@@ -18,9 +18,9 @@ function App() {
           <Route path="menu" element = {<Menu/>}/>
           <Route path="contact" element = {<Contact/>}/>
           <Route path="*" element={<Navigate to = "/" />}/>
+        </Route>
           <Route path="/login" element={<Login/>}/>
           <Route path="/createuser" element={<Signup/>}/>
-        </Route>
       </Routes>
     </Router>
     </CartProvider>
