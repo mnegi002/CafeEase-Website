@@ -1,4 +1,5 @@
-import { useReducer } from "react"
+import React from 'react';
+import { useEffect, useState , useReducer} from "react"
 import CartContext from "./CartContext"
 
 export const defaultCartState = {
@@ -63,11 +64,48 @@ const cartReducer = (state, action) => {
         }
     }
 
+    // if(action.type==='DROP'){
+    //     let emptyArray = []
+    //     return emptyArray
+    // }
+
+
+    
 
     return defaultCartState
 }
 const CartProvider = props => {
     const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState)
+    const [email, setEmail] = useState(localStorage.getItem('userEmail') || null);
+
+    useEffect(() => {
+      // Update the email in the context if it changes in local storage
+      const storedEmail = localStorage.getItem('userEmail');
+      if (storedEmail !== email) {
+        setEmail(storedEmail || null);
+      }
+    }, [email]);
+  
+    // const updateEmail = (newEmail) => {
+    //   setEmail(newEmail);
+    //   // Also update local storage if needed
+    //   localStorage.setItem('userEmail', newEmail);
+    // };
+    // useEffect(() => {
+    //     const storedCartData = JSON.parse(localStorage.getItem('cartItems'));
+    //     if(storedCartData){
+    //         dispatchCartAction({type:'REPLACE_ITEMS' , payload:storedCartData})
+    //     }
+    //     // cartCtx.cartItemAddHandler(storedCartItems);
+    //   }, []);
+    
+      // useEffect to update local storage whenever cart items change
+    //   const replaceItems = (newItems) => {
+    //     dispatchCartAction({
+    //         type : 'REPLACE_ITEMS',
+    //         payload : newItems
+    //     })
+    //   } 
     const addItemHandler = (item) => {
         // console.log("THE ITEM", item)
         dispatchCartAction({

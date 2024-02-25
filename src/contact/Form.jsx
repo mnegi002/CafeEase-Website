@@ -36,7 +36,7 @@ const Form = () => {
             <div className={classes.contactform}>
                 <div className={classes.formheading}><h1>Message Us </h1></div>
                 <div>
-                    <form onSubmit={formHandler}>
+                    <form onSubmit={formHandler} id="form">
                         <div className={classes.formlabel}>
                             <label htmlFor="name">Name<span>*</span></label>
                             <input type="text " 

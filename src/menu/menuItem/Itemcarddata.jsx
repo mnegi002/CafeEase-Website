@@ -4,21 +4,21 @@ const ItemcardData =[
     items : [
     {
         id : 'm1',
-        title : 'Chole-Chawal',
+        title : 'Chole Chawal',
         price : 40,
         info : 'Savory spiced chickpeas and fluffy rice, a culinary delight from North India.',
         imgsrc : '/images/cholechawal.jpg' ,
     },
     {
         id : 'm2',
-        title :'Rajma-Rice' ,
+        title :'Rajma Rice' ,
         price : 40,
         info : 'Hearty kidney bean curry served over fluffy rice for a comforting meal.',
         imgsrc : 'images/RajmaRice.jpg',
     },
     {
         id : 'm3',
-        title :'Fried-Rice' ,
+        title :'Fried Rice' ,
         price : 40,
         info : 'Delicious stir-fried rice with a mix of veggies and savory flavors.',
         imgsrc : 'images/friedRice.jpg',

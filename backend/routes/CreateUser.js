@@ -8,9 +8,11 @@ const jwtSecret = "ThisisCafeEaseWebsitebySidNangiPelu$#"
 
 
 router.post("/createuser", [
-body('email').isEmail(),
-body('name').isLength({ min: 5 }),  
-body('password','Incorrect Password').isLength({ min: 5 })],
+    body('email').isEmail().withMessage('Invalid email. Please enter a valid email address.'),
+    body('name').isLength({ min: 5 }).withMessage('Name must be at least 5 characters long.'),
+    body('password').isLength({ min: 5 }).withMessage('Weak password. Please use a stronger password.'),
+// body('password','Incorrect Password').isLength({ min: 5 })
+],
 async (req,res) => {
 
     const errors = validationResult(req);
@@ -39,12 +41,13 @@ async (req,res) => {
 })
 
 router.post("/loginuser", [
-    body('email').isEmail(),  
-    body('password','Incorrect Password').isLength({ min: 5 })],
+    body('email').isEmail().withMessage('Invalid email. Please enter a valid email address.'),
+  body('password').isLength({ min: 5 }).withMessage('Invalid password. Please enter a valid password.'),
+],
 async (req,res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({success:false, errors: errors.array() });
     }
 
 
@@ -71,7 +74,7 @@ async (req,res) => {
         
         } catch(error){
             console.log(error)
-            res.json({success:false});
+            res.json({success:false, errorCode:'Server Error'});
 
     }
 

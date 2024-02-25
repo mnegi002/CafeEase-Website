@@ -15,6 +15,7 @@ const CartButton = (props) => {
     //currnumber = 3, cartCtx.items.length = 4
     //.reduce, 3 + 1 + 1 + 1 + 1
     const {items} = cartCtx
+    // console.log(items)
     // const numOfCartItems = cart Ctx.items.length
     // console.log(numOfCartItems)
     const navCart = `${classes.cartlogo} ${isHighlighted ? classes.bump : ' '}`

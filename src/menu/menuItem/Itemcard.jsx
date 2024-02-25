@@ -4,15 +4,39 @@ import './Itemcarddata'
 import CartContext from '../../cart/cartContextAPI/CartContext'
 const ItemCard = (props) => {
     const cartCtx = useContext(CartContext);
-    const itemHandler = amount =>{
+    const itemHandler = async() =>{
         // console.log("THE AMOUNT", amount);
-        cartCtx.addItem({
+        try{
+          cartCtx.addItem({
             id:props.id,
             title :props.title,
             price : props.price,
             amount :  1})
             // console.log(cartCtx)
-    }
+            const res = await fetch('http://localhost:4000/api/cartitems', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  email: localStorage.getItem('userEmail'), // Assuming you store user email in localStorage
+                  items: [
+                    {
+                      name: props.title,
+                      quantity: 1,
+                      price: props.price,
+                      totalPrice: props.price,
+                    },
+                  ],
+                  totalAmount: props.price,
+                }),
+              })
+              const data = await res.json();
+              console.log('Item added to MongoDB:', data);
+          } catch (error) {
+              console.error('Error adding item to MongoDB:', error);
+          }
+        }
     return (
         <div className={classes.divmain}>
             <div className={classes.container}>
