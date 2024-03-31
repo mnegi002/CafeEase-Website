@@ -1,11 +1,19 @@
 .footer{
-    margin-top:20px;
+    margin-top:-20px;
+    
+    background-color: rgba(15, 15, 15, 0.986);
+    /* margin-bottom: -20px; */
+    height:40px;
+    color:white;
+    text-align:center;
 }
 
 .footer>p{
     text-align:center;
+    padding-top: 8px;
 }
 
 .footerspan{
-    color:rgb(59, 59, 179);
+    color:#AE9A64;
+    font-weight: 600;
 }

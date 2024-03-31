@@ -47,6 +47,19 @@
         res.status(500).send('Server Error: ' + err.message);
       }
     });
+    router.post("/clearcart" , async (req,res)=>{
+      try {
+        const { email } = req.body;
     
+        // Find and delete cart items for the specified user
+        await CartItem.deleteMany({ email });
+    
+        res.json({ success: true });
+      } catch (err) {
+        console.error('Error clearing cart:', err);
+        res.status(500).json({ error: 'Server Error' });
+      }
+    
+    })
     module.exports = router;
     

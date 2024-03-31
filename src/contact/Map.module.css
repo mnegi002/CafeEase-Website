@@ -1,16 +1,39 @@
-.mapdiv{
-   margin-top: 50px;
+.mapdiv {
     margin-left: 50px;
-    height:100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 45%;
+    height: 100%;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    box-shadow: 10px 10px 20px black, inset -10px -10px 20px rgba(255, 255, 255, 0.048);
 }
 
-.map{
-    border-radius: 10px
+.map {
+    padding-left: 10px;
+    outline: none;
+    width: 95%;
 }
 
-.mapdiv:hover{
+.mapdiv:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-    
+}
+
+.loc {
+    color: white;
+    text-align: center;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+    .mapdiv {
+        margin-left: 20px; /* Adjust margin for tablets */
+        width: 80%; /* Adjust width for tablets */
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    .mapdiv {
+        margin-left: 10px; /* Adjust margin for mobile devices */
+        width: 90%; /* Adjust width for mobile devices */
+    }
 }

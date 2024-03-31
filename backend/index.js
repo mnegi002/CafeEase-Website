@@ -3,6 +3,7 @@ const mongoDB = require("./db/db")
 const cartDB = require("./db/cartdb")
 const orderDB = require("./db/orderdb")
 const removeDB = require('./db/removedb')
+
 const cors = require("cors")
 
 
@@ -19,7 +20,7 @@ removeDB();
 
 app.use(cors())
 app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","*");
+  res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();

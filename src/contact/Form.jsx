@@ -77,7 +77,7 @@ const Form = () => {
                             onChange={changeHandler} />
                         </div>
                         <button className={classes.formbutton} type="submit">
-                            Submit Form
+                            SUBMIT
                         </button>
                     </form>
                 </div>

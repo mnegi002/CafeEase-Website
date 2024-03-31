@@ -1,23 +1,45 @@
 .divmain{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    /* border:2px solid red; */
-    margin-top:20px;
+    /* border:1px solid red; */
+    background-color: #323232;
+    /* margin-top:20px; */
+    overflow-x: hidden;
+    width:100%;
+    height: 100vh;
+}
+
+.divmain h1{
+    color: #AE9A64;
+    margin-top: 200px;
+}
+
+.orderdiv{
+    box-shadow: 10px 10px 20px black ,inset -10px -10px 20px rgba(255, 255, 255, 0.048);
+    width:60%;
+    height: 80%;
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid blue;
 }
 
 .container{
-    width: 100%;
-    height: 5%;
+    width: 80%;
+    height: 50%;
     background-color: beige;
     border: 2px none;
     margin: 3px;
     padding: 2px;
-    padding-left: 10px;
+    border:2px solid green;
+    /* padding-left: 10px; */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+    flex-direction: column;
     /* border:2px solid blue; */
 
 }
@@ -28,6 +50,7 @@
     border: 2px none;
     margin: 3px;
     display: flex;
+    border:2px solid red;
     flex-direction: column;
     justify-content: center;
   
@@ -126,7 +149,7 @@
 
 .line {
     height: 2px;
-    width: 100%;
+    width: 75%;
     background-color: #d3d3d3;
     margin: 3px 0;
   }

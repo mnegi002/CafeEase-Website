@@ -35,21 +35,21 @@ export default function OrderCard() {
   return (
     <div className={classes.divmain}>
       {orderData && (
-        <div>
+        <div className={classes.orderdiv}>
           <h2>Order Date: {orderData.orderDate}</h2>
-          <div className={classes.container}>
             {orderData.items && orderData.items.map((item, index) => (
+          <div className={classes.container}>
               <div className={classes.box} key={index}>
                 <h3>Name: {item.name}</h3>
                 <h3>Quantity: {item.quantity}</h3>
                 <h4>₹{item.price}</h4>
               </div>
-            ))}
           </div>
+            ))}
           <div className={classes.line}></div>
         </div>
       )}
-      {!orderData && "you haven't placed any order yet"}
+      {!orderData && <h1>Oops !! You haven't placed any order yet</h1>}
     </div>
   );
 }

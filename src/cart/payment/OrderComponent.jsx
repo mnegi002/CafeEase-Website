@@ -38,7 +38,8 @@ export default function OrderComponent(props) {
 
       // Store order in MongoDB
       await storeOrderInMongo(items, totalAmount);
-
+      //mongo cart clear
+      await clearCartInMongo(userEmail)
       // Clear the cart after placing the order
       cartCtx.clearCart();
     } catch (error) {
@@ -75,6 +76,26 @@ export default function OrderComponent(props) {
       }
     } catch (error) {
       console.error('Error storing order:', error);
+    }
+  }
+  const clearCartInMongo = async (email) => {
+    try {
+      const apiUrl = "http://localhost:4000/api/clearcart";
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        console.log('Cart cleared');
+      } else {
+        console.error('Error clearing cart:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error clearing cart:', error);
     }
   };
 

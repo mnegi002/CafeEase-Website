@@ -23,18 +23,16 @@ router.post('/orderData', async (req, res) => {
       });
     } else {
       // If an order exists for the email, update the existing order
-      await Order.findOneAndUpdate(
-        { email },
-        {
-          $push: {
-            items: {
-              name: items[0].name,
-              quantity: items[0].quantity,
-              price: items[0].price,
-            },
-          },
-        },
-      );
+      existingOrder.items.push(...items.map(item => ({
+        name: item.name,
+        quantity: item.quantity,
+        price: item.price,
+      })));
+
+      // Recalculate totalAmount based on updated items
+      existingOrder.totalAmount = existingOrder.items.reduce((total, item) => total + (item.quantity * item.price), 0);
+      
+      await existingOrder.save();
     }
 
     res.json({ success: true });

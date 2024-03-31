@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* *{
     margin: 0;
@@ -273,7 +273,12 @@
     color: var(--primary);
   }
   
-  .error{
+  p.error{
     color:red;
-    border:2px solid red;
+    /* border:2px solid red; */
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: -2px;
+    text-align: start;
+    margin-left: -20px;
   }

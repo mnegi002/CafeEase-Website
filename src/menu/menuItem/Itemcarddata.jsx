@@ -6,7 +6,7 @@ const ItemcardData =[
         id : 'm1',
         title : 'Chole Chawal',
         price : 40,
-        info : 'Savory spiced chickpeas and fluffy rice, a culinary delight from North India.',
+        info : 'Spiced chickpeas and fluffy rice, a culinary delight from North India.',
         imgsrc : '/images/cholechawal.jpg' ,
     },
     {
@@ -108,7 +108,7 @@ const ItemcardData =[
         id : 'f2',
         title : 'Chole Kulche',
         price : 40,
-        info : '2 pcs kulcha served with amritsari Chole, ring onion, lemon slice & green chilli pickle.',
+        info : '2 pcs kulcha served with amritsari Chole,onion, lemon & green chilli pickle.',
         imgsrc : '/images/Cholekulche.jpeg',
     },
     {
@@ -121,15 +121,15 @@ const ItemcardData =[
     {
         id : 'f4',
         title : 'Momos' ,
-        price : 40,
-        info : 'Your classic steamed vegetarian momo, filled with cabbage, minced carrot, onion and coriander.',
+        price : 60,
+        info : 'Your classic steamed vegetarian momo, filled with cabbage, carrot, onion and coriander.',
         imgsrc : '/images/Momos.jpg',
     },
 
     {
         id : 'f5',
         title :'Fried Momos' ,
-        price : 50,
+        price : 80,
         info : 'Momo Delight: Crispy Outside, Flavor Explosion Inside!',
         imgsrc : '/images/FriedMomos.jpg',
     },
@@ -143,8 +143,8 @@ const ItemcardData =[
     {
         id : 'f7',
         title :'Samosa ' ,
-        price : 10,
-        info :'Yummy triangle snack with tasty potatoes and peas inside, all crispy and fried!',
+        price : 15,
+        info :'Yummy triangle snack with tasty potatoes and peas inside.',
         imgsrc : '/images/Samosa.jpg',
     },
 ]
@@ -171,7 +171,7 @@ const ItemcardData =[
         id : 'w3',
         title : 'Haldirams Aloo Bhujiya',
         price : 10,
-        info : 'Crunchy and flavorful potato snack made from thinly sliced and deep-fried potatoes.',
+        info : 'Crunchy and flavorful potato snack, thinly sliced and deep-fried.',
         imgsrc : '/images/alooBhujiya.jpeg',
     },
     {

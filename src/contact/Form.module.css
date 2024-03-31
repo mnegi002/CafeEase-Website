@@ -1,13 +1,17 @@
 .contactform{
     /* border:2px solid red; */
     width:40%;
-    padding: 10px;;
+    padding: 10px;
+    box-shadow: 10px 10px 20px black ,inset -10px -10px 20px rgba(255, 255, 255, 0.048);
     /* background-color: rgb(233, 97, 47); */
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .formheading>h1{
     text-align: center;
     margin-right:50px;
+    color: white;
 }
 
 .formlabel{
@@ -31,12 +35,9 @@
     margin-bottom: 10px;
     width:75%;
     height: 30px;
-    /* background-color: rgb(222, 201, 201); */
-   
-}
-
-.formlabel>input::placeholder{
-    padding:5px;
+    background-color: rgb(222, 201, 201);
+    outline: none;
+   padding-left: 5px;
 }
 
 /* .formlabel>input:focus .formlabel>input:active{
@@ -49,22 +50,30 @@ textarea{
     margin-left: 10px;
     margin-top: 10px;
     width:75%;
+    background-color: rgb(222,201,201);
+    outline: none;
+    padding-left: 5px;
+    padding-top: 2px;
 }
 
-.formlabel>textarea::placeholder{
-    padding:5px;
-}
+
 
 .formbutton{
-    width:125px;
-    font-size: 16px;
+    width:90px;
+    font-size: 15px;
     margin-left:30px;
     height:40px;
+    font-weight: 700;
     border-radius:5px;
     /* padding:3px; */
     margin-top: 30px;
-    background-color: #ff511c;
+    background-color:#AE9A64;
     border:none;
-    color: white;
+    color: black;
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.formbutton:hover{
+    color: white;
 }

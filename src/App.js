@@ -4,13 +4,14 @@ import Contact from './contact/Contact';
 import Menu from './menu/Menu';
 import Navbar from './home/Navbar';
 import CartProvider from './cart/cartContextAPI/CartProvider';
-// import Signup from './screens/Signup';
+import Signup from './screens/Signup';
 import Login from './screens/Login';
 // import Auth from './screens/Auth';
 import Myorders from './order/Myorders';
 // import PaymentPage from './cart/payment/PaymentPage';
 import Success from './order/orderStatus/Success';
 import Failed from './order/orderStatus/Failed';
+import AuthForm from './screens/AuthForm';
 // import AuthPage from './screens/AuthPage';
 // import Footer from './home/Footer';
 
@@ -29,8 +30,9 @@ function App() {
           <Route path="cancel" element={<Failed/>}/>
           <Route path="*" element={<Navigate to = "/" />}/>
         </Route>
-          <Route path="/login" element={<Login/>}/>
-          {/* <Route path="/createuser" element={<Signup/>}/> */}
+          {/* <Route path="/login" element={<Login/>}/> */}
+          <Route path="/authform" element={<AuthForm/>}/>
+          {/*  <Route path="/createuser" element={<Signup/>}/> */}
       </Routes>
     </Router>
     </CartProvider>

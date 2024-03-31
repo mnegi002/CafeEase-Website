@@ -23,7 +23,7 @@ const Navbar = () => {
 
     return (
         <>
-
+    
             {cartShow && <Cart onClose={hideHandler} />}
             <div className={classes.navdiv}>
                 <div className={classes.logodiv}>
@@ -36,20 +36,21 @@ const Navbar = () => {
                 <div className={classes.listdiv}>
                     <ul className={classes.list}>
                         <li><NavLink className={classes.listItem} to="/" style={({ isActive }) => ({
-                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
-                            borderBottomWidth: isActive ? 'medium' : 'none'
+                             color : isActive ? 'white' : '' ,
+                            //  transform : isActive ? "color 1s fade-in-out" : '' ,
                         })}>Home</NavLink></li>
                         <li><NavLink className={classes.listItem} to="menu" style={({ isActive }) => ({
-                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
-                            borderBottomWidth: isActive ? 'medium' : 'none'
+                             color : isActive ? 'white' : '' ,
+                            //  transform : isActive ? "color 1s fade-in-out" : '' ,
                         })}>Menu</NavLink></li>
                         <li><NavLink className={classes.listItem} to="contact" style={({ isActive }) => ({
-                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
-                            borderBottomWidth: isActive ? 'medium' : 'none'
+                             color : isActive ? 'white' : ' ' ,
+                            //  transition : isActive ? ' color 0.3s ease-in-out, color 0.3s ease-in-out' : '' ,
                         })}>Contact</NavLink></li>
                         <li><NavLink className={classes.listItem} to="order" style={({ isActive }) => ({
-                            borderBottom: isActive ? '2px solid rgb(228, 93, 44)' : 'none',
-                            borderBottomWidth: isActive ? 'medium' : 'none'
+                            
+                            color : isActive ? 'white' : '' ,
+                            // transform : isActive ? "color 1s fade-in-out" : '' ,
                         })}>My Orders</NavLink></li>
                     </ul>
                 </div>

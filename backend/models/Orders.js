@@ -4,7 +4,7 @@ const {Schema} = mongoose
 const OrderSchema = new Schema({
     email :{
         type : String ,
-        reuired : true ,
+        required : true ,
         unique : true
     },
           items: [
