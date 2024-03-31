@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"npm i",
-    "dev": "nodemon index.js"
+    "test": "eslint",
+    "build":"npm i"
   },
   "author": "",
   "license": "ISC",
