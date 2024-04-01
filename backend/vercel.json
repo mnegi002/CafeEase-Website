@@ -4,12 +4,12 @@
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "/index.js"
+        "dest": "http://localhost:4000/api/$1"
       }
     ],
     "builds": [
       {
-        "src": "package.json",
+        "src": "client/package.json",
         "use": "@vercel/static-build"
       }
     ]
