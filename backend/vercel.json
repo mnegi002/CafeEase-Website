@@ -3,7 +3,7 @@
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "http://backend/api/$1"
+        "dest": "http://localhost:4000/api/$1"
       },
       {
         "src": "/(.*)",
@@ -14,10 +14,10 @@
       {
         "src": "client/package.json",
         "use": "@vercel/static-build",
-        "config": { "distDir": "client/build" }
+        "config": { "distDir": "/build" }
       },
       {
-        "src": "server/index.js",
+        "src": "backend/index.js",
         "use": "@vercel/node"
       }
     ]
