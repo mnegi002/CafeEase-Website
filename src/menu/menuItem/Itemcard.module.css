@@ -6,10 +6,12 @@
     /* border:2px solid red; */
     margin-top:10px;
     height: auto;
+    width: 100%;
+    
 }
 
 .container{
-    width: 85%;
+    width: 80%;
     /* height: 5%; */
     background-color: beige;
     border: 2px none;
@@ -20,13 +22,14 @@
     justify-content: space-between;
     align-items: center;
     /* border:2px solid blue; */
+    border-radius: 4px;
 
 }
 
 .box{
     /* height: 200px; */
     width: 200px;
-    /* border: 2px none; */
+    /* border: 2px green; */
     margin: 3px;
     display: flex;
     flex-direction: column;
@@ -38,15 +41,11 @@
 
 #box1{
     width: 600px;   
-    height: 150px;
+    height: 140px;
     padding: 2px;
-    /* border:2px solid orange; */
-    background-color: none;
+    /* border:2px solid orange;
+    background-color: none; */
     /* align-items: flex-start; */
-    
-    
-    
-    
 
 }
 
@@ -63,6 +62,8 @@
 .box p{
     /* margin-top: -2%; */
     margin-bottom:5%;
+    /* border:2px solid pink; */
+
 }
 
 #box2{
@@ -140,12 +141,43 @@
 
 
 /* Styles for tablet and mobile screens */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 800px) {
     .container {
         width: 100%; /* Adjust width for full width on smaller screens */
     }
+    #box2{
+        width: 40%;
+    }
 
     #box1 {
-        width: 100%; /* Adjust width for full width on smaller screens */
+        width: 60%;/* Adjust width for full width on smaller screens */
+        padding:0px;
     }
+    .box p{
+        font-size:12.5px ;
+
+    }
+    .box h3{
+        font-size: 15px;
+        margin-bottom: 0%;
+    }
+    .box h4{
+        margin-bottom: 0%;
+    }
+    .box p{
+        margin-bottom: 1%;
+    }
+    .box{
+        width:70%;
+    }
+    .divmain{
+        width: 90%;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+    }
+
 }
+
