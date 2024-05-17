@@ -17,7 +17,7 @@ const Container = () => {
                         <NavLink to="menu"><button className={classes.menulink}>EXPLORE FOOD</button></NavLink>
                     </div>
                     <div className={classes.image}>
-                        <img className={classes.img} src="./images/RajmaRice.jpg" width='500' height='500' alt="pic" />
+                        <img className={classes.img} src="./images/RajmaRice.jpg" width='100%' height='100%' alt="pic" />
                     </div>
                 </div>
                 {/* <div className={classes.dishes}>

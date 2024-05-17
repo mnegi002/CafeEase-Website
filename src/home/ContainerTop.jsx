@@ -19,7 +19,7 @@ function ContainerTop() {
       <div className={classes.content}>
         <h3>Welcome to </h3>
         <h1>Cafe<span>Ease</span></h1>
-        <p> ~ Cafeteria on your finger tips</p>
+        <p style = {{"font-size":"22px"}}> ~ Cafeteria on your finger tips</p>
         <NavLink to='menu'><button>ORDER NOW</button></NavLink>
       </div>
     </div>

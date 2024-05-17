@@ -7,6 +7,8 @@
     box-shadow: 10px 10px 20px black, inset -10px -10px 20px rgba(255, 255, 255, 0.048);
 }
 
+
+
 .map {
     padding-left: 10px;
     outline: none;
@@ -26,7 +28,7 @@
 @media screen and (max-width: 768px) {
     .mapdiv {
         margin-left: 20px; /* Adjust margin for tablets */
-        width: 80%; /* Adjust width for tablets */
+        width: 90%; /* Adjust width for tablets */
     }
 }
 

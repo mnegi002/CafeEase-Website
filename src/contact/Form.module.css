@@ -7,6 +7,19 @@
     margin-bottom: 20px;
     border-radius: 5px;
 }
+@media (min-width : 320px ) and (max-width : 450px) {
+    .contactform{
+       
+        width: 90%;
+    }
+}
+@media (min-width : 500px ) and (max-width : 1000px) {
+    .contactform{
+
+       
+        width: 95%;
+    }
+}
 
 .formheading>h1{
     text-align: center;

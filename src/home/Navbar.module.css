@@ -6,9 +6,8 @@
     position: sticky;
     top:0;
     z-index: 2;
-left :18%;
+    left :18%;
     align-items: center;
-
     height:9.8vh;
     /* overflow: auto; */
     /* border:2px solid red; */
@@ -18,6 +17,12 @@ left :18%;
     padding-bottom:5px ;
     color:white;
     box-shadow: rgba(0, 0, 0, 0.18) 1.95px 1.95px 2.6px;
+    
+}
+@media (min-width:320px) and (max-width :800px) {
+    .navdiv{
+        justify-content: space-between;
+    }
     
 }
 
@@ -70,6 +75,7 @@ left :18%;
 
     margin-left:-100px;
     /* padding: 5px; */
+    
 
 
 }
@@ -202,10 +208,6 @@ button{
     transition: color 0.3s ease-in-out;
     /* animation: bg 1.8s ease-in-out infinite; */
 }
-
-
-
-
 .usericon{
     /* border:2px solid red; */
     /* margin-top: 5px; */
@@ -232,3 +234,76 @@ button{
         color:red;
         background-color: rgba(201, 24, 24, 0.911);
     } */
+
+.hamburger{
+    display:none;
+    padding-left: 10px;
+}
+.closebutton{
+    display: block;
+    padding-left: 10px;
+}
+.hamburgermenu{
+    /* display: none !important; */
+    position: fixed;
+    left: 0%;
+    top: 10%;
+    width:100%;
+    height: 90vh;
+    background:  #bdad80;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.hamouterdiv{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   
+
+}
+.hamlist{
+    display: flex;
+    flex-direction: column;
+    gap:4;
+    height: 100%;
+    list-style: none;
+    margin-left: 50px;
+   
+  
+   
+
+}
+.hamItem{
+    display: flex;
+    gap: 4;
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+
+}
+
+
+
+@media (max-width:950px) {
+    .list{
+        display:none;
+    }
+    .login{
+        display: none;
+    }
+    .usericon{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
+
