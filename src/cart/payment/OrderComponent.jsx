@@ -80,7 +80,7 @@ export default function OrderComponent(props) {
   }
   const clearCartInMongo = async (email) => {
     try {
-      const apiUrl = "http://localhost:4000/api/clearcart";
+      const apiUrl = `http://localhost:4000/api/clearcart`;
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {

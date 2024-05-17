@@ -1,12 +1,15 @@
 // const { type } = require('@testing-library/user-event/dist/type');
 const mongoose = require('mongoose')
+const validator = require('validator');
 
 const{ Schema } = mongoose;
+
 
 const UserSchema = new Schema({
     name : {
         type: String,
-        required: true
+        required: true,
+        minLength:[3 , "Must contain atleast 3 Characters"]
     },
     // username:{
     //     type:String,
@@ -14,7 +17,9 @@ const UserSchema = new Schema({
     // },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique:true,
+        validate:[validator.isEmail , "Please provide a valid Email"]
     },
     password:{
         type:String,

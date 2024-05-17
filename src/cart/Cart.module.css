@@ -46,9 +46,12 @@
     border-color:#ff511c;
     color: white;
   }
-  
+  .button--alt{
+    margin-right: 10px;
+  }
   .actions .button--alt {
     color: #ff511c;
+  
   }
   
   .actions .button {

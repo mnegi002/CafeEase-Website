@@ -1,24 +1,38 @@
 const express = require('express')
 const mongoDB = require("./db/db")
-const cartDB = require("./db/cartdb")
-const orderDB = require("./db/orderdb")
-const removeDB = require('./db/removedb')
-
+// const cartDB = require("./db/cartdb")
+// const orderDB = require("./db/orderdb")
+// const removeDB = require('./db/removedb')
+const {config} = require('dotenv')
+const cookieParser = require('cookie-parser')
+const cloudinary = require('cloudinary').v2;
 const cors = require("cors")
-
-
+const fileUpload = require('express-fileupload')
 const stripe = require("stripe")('sk_test_51OkLUZSGFkTftsaBay7P36Yqg7wRZ8vomsRVwSeeAgkUJ6rnWYrUtXdDZpZ6JPX36xZGsaMe5QwIThR1rq4Du0He0021ls8QqO')
-
-const port = 4000
-
 const app = express()
 
 mongoDB();
-cartDB();
-orderDB();
-removeDB();
+// cartDB();
+// orderDB();
+// removeDB();
 
-app.use(cors())
+config({path:"./config/.env"})
+
+
+cloudinary.config({ 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_SECRET_KEY, 
+  api_secret: process.env.CLOUDINARY_API_KEY 
+});
+
+
+app.use(cors({
+  origin:[process.env.FRONTEND_URL , process.env.DASHBOARD_URL],
+  methods:["GET" , "POST" , "PUT" , "DELETE"],
+  credentials:true,
+}))
+
+
 app.use((req,res,next)=>{
   res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -26,8 +40,15 @@ app.use((req,res,next)=>{
   next();
 })
 
+app.use(cookieParser());
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+app.use(fileUpload({
+  useTempFiles:true,
+  tempFileDir:"/tmp/",
+}))
 
+app.use("/api", require('./routes/Message'));
 app.use('/api', require("./routes/CreateUser"));
 app.use('/api', require("./routes/OrderData"))
 app.use('/api',require("./routes/CartItemData"))
@@ -89,7 +110,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(process.env.PORT, () => {
+  console.log(`Example app listening on port ${process.env.PORT}`)
 })
 

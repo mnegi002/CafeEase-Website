@@ -13,7 +13,7 @@ const ItemCard = (props) => {
             price : props.price,
             amount :  1})
             // console.log(cartCtx)
-            const res = await fetch('http://localhost:4000/api/cartitems', {
+            const res = await fetch(`http://localhost:4000/api/cartitems`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
