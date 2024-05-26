@@ -180,7 +180,7 @@ button{
     /* transition: border-bottom-color 0.3s ease-in-out; */
     /* margin-right: 90px; */
     margin-inline-start: 5px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     text-align: center;
     /* border:2px sold green; */
     font-size: 15px;
@@ -199,7 +199,7 @@ button{
  /* border: 2px solid red; */
     text-decoration: none;
     font-size: 15px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     padding: 2px;
     margin-top: -2px;
     margin-inline-start: 3px;

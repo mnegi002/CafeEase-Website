@@ -19,8 +19,8 @@ export default function AuthForm() {
     e.preventDefault();
 
     const apiUrl = isSignUpActive
-      ? "http://localhost:4000/api/createuser"
-      : "http://localhost:4000/api/loginuser";
+      ? `http://localhost:4000/api/createuser`
+      : `http://localhost:4000/api/loginuser`;
 
     const response = await fetch(apiUrl, {
       method: "POST",

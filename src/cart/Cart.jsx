@@ -66,7 +66,7 @@ const Cart = (props) => {
     
 // console.log("asdfasdfasDF", item.title)
     try {
-      const response = await fetch('http://localhost:4000/api/removecartitems', {
+      const response = await fetch(`http://localhost:4000/api/removecartitems`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

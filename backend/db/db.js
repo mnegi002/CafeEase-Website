@@ -1,27 +1,17 @@
 const express = require('express')
 const mongoose = require('mongoose');
+require('dotenv').config({ path: './config/.env' });
 
-// const mongoURI = 'mongodb+srv://siddhant:siddhant48m@food.tkv1g9r.mongodb.net/' 
-// const mongoURI = 'mongodb://127.0.0.1:27017/Food'
-// const mongoDB = async () => {
-//     await mongoose.connect(mongoURI,{ useNewUrlParser : true}, async(err, result) => {
-//         if(err) console.log("---", err)
-//         else{
-//     console.log("connected");
-//     const fetched_data = await mongoose.connection.db.collection("fooditem");
-//     fetched_data.find({}).toArray(function(err, data){
-//                 if(err) console.log(err)
-//                 // else console.log(data)
-//         })
-//     }
-// }); 
-// };
 
-const mongoURI =  'mongodb+srv://mayank:mayank2002@food-order.zuokjbh.mongodb.net/foodordering?retryWrites=true&w=majority'
+// const mongoURI =  'mongodb+srv://mayank:mayank2002@food-order.zuokjbh.mongodb.net/foodordering?retryWrites=true&w=majority'
 const mongoDB = async () => {
-    await mongoose.connect(mongoURI , { useNewUrlParser : true } , async(err,result) =>{
+    // mongoose.set('strictQuery', false);
+    await mongoose.connect(process.env.MONGO_URI, { 
+        useNewUrlParser : true ,
+        // dbName:"CAFEEASE DB",
+    } , async(err,result) =>{
         if(err){
-            console.log("---",err)
+            console.log("--- not connnected",err)
         }
         else{
             console.log("connected")
@@ -34,7 +24,6 @@ const mongoDB = async () => {
         }
     })
 }
-
 
 
 module.exports = mongoDB
