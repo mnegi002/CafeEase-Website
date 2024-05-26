@@ -36,23 +36,35 @@ const Navbar = () => {
             <div className={classes.hamburgermenu}>
             <div className={classes.hamouterdiv}>  
            <ul className={classes.hamlist}>
-               <li><NavLink className={classes.hamItem} to="/" style={({ isActive }) => ({
+           {openham && 
+            <li onClick={hamhandler}><NavLink className={classes.hamItem} to="/" style={({ isActive }) => ({
                     color : isActive ? 'white' : '' ,
                    //  transform : isActive ? "color 1s fade-in-out" : '' ,
-               })}>Home</NavLink></li>
-               <li><NavLink className={classes.hamItem} to="menu" style={({ isActive }) => ({
+               })}>Home</NavLink></li>}
+
+             {openham && 
+                <li  onClick={hamhandler}><NavLink className={classes.hamItem} to="menu" style={({ isActive }) => ({
                     color : isActive ? 'white' : '' ,
                    //  transform : isActive ? "color 1s fade-in-out" : '' ,
-               })}>Menu</NavLink></li>
-               <li><NavLink className={classes.hamItem} to="contact" style={({ isActive }) => ({
+               })}>Menu</NavLink></li>}
+               
+               {openham && 
+                <li  onClick={hamhandler}><NavLink className={classes.hamItem} to="contact" style={({ isActive }) => ({
                     color : isActive ? 'white' : ' ' ,
                    //  transition : isActive ? ' color 0.3s ease-in-out, color 0.3s ease-in-out' : '' ,
-               })}>Contact</NavLink></li>
-               <li><NavLink className={classes.hamItem} to="order" style={({ isActive }) => ({
+               })}>Contact</NavLink></li>}
+               
+               {openham && 
+                <li  onClick={hamhandler}><NavLink className={classes.hamItem} to="order" style={({ isActive }) => ({
                    
                    color : isActive ? 'white' : '' ,
                    // transform : isActive ? "color 1s fade-in-out" : '' ,
-               })}>My Orders</NavLink></li>            
+               })}>My Orders</NavLink></li>   
+               }
+              
+               
+              <CartButton onClick={showHandler} />
+              <Logout className = {classes.hamlogin} />       
            </ul>
        </div>
    </div>
