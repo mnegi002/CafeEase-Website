@@ -63,8 +63,7 @@ const Navbar = () => {
                }
               
                
-              <CartButton onClick={showHandler} />
-              <Logout className = {classes.hamlogin} />       
+              
            </ul>
        </div>
    </div>
