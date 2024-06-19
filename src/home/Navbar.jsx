@@ -61,9 +61,6 @@ const Navbar = () => {
                    // transform : isActive ? "color 1s fade-in-out" : '' ,
                })}>My Orders</NavLink></li>   
                }
-              
-               
-              
            </ul>
        </div>
    </div>
