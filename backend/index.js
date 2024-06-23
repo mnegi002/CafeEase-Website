@@ -3,12 +3,13 @@ const mongoDB = require("./db/db")
 // const cartDB = require("./db/cartdb")
 // const orderDB = require("./db/orderdb")
 // const removeDB = require('./db/removedb')
+require('dotenv').config({ path: './config/.env' });
 const {config} = require('dotenv')
 const cookieParser = require('cookie-parser')
 const cloudinary = require('cloudinary').v2;
 const cors = require("cors")
 const fileUpload = require('express-fileupload')
-const stripe = require("stripe")('sk_test_51OkLUZSGFkTftsaBay7P36Yqg7wRZ8vomsRVwSeeAgkUJ6rnWYrUtXdDZpZ6JPX36xZGsaMe5QwIThR1rq4Du0He0021ls8QqO')
+const stripe = require("stripe")(process.env.SECRET_KEY)
 const app = express()
 
 mongoDB();
@@ -25,16 +26,17 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_KEY 
 });
 
+app.use(cors())
 
-app.use(cors({
-  origin:[process.env.FRONTEND_URL , process.env.DASHBOARD_URL],
-  methods:["GET" , "POST" , "PUT" , "DELETE"],
-  credentials:true,
-}))
+// app.use(cors({
+//   origin:[process.env.FRONTEND_URL , process.env.DASHBOARD_URL],
+//   methods:["GET" , "POST" , "PUT" , "DELETE"],
+//   credentials:true,
+// }))
 
 
 app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", process.env.REACT_URL);
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
@@ -89,8 +91,8 @@ app.post("/payment", async (req, res) => {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: `http://localhost:3000/success`,
-      cancel_url: `http://localhost:3000/cancel`,
+      success_url: `${process.env.REACT_URL}/success`,
+      cancel_url: `${process.env.REACT_URL}/cancel`,
       // payment_intent_data: {
       //   description: `Total Amount: ₹${product.totalAmount}`, }
     });
